@@ -12,9 +12,26 @@
     <main>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, rerum fugit incidunt reprehenderit officia porro cumque ratione sequi alias, illum ullam. Earum, ea inventore atque dolorem quibusdam voluptatem nihil fuga!</p>
         <p>Facere commodi animi architecto possimus itaque maiores nemo. Cum iste error reprehenderit eius minima corporis sed quasi! Dolor reiciendis, harum modi placeat beatae vel alias ducimus minima voluptatem magnam deleniti!</p>
-        <div style="text-align: center;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8603.929753854089!2d-3.739937653955862!3d40.321299678218864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4220b6d8b9ab41%3A0xdfb6a4bc5bdfe126!2sLas%20Margaritas-Universidad!5e0!3m2!1ses!2ses!4v1758896098182!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <!--MAPA GOOGLE-->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8603.929753854089!2d-3.739937653955862!3d40.321299678218864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4220b6d8b9ab41%3A0xdfb6a4bc5bdfe126!2sLas%20Margaritas-Universidad!5e0!3m2!1ses!2ses!4v1758896098182!5m2!1ses!2ses"
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <style>
+            
+            iframe {
+                border-radius: 8px;
+                margin: 1rem 0;
+                border: var(--borde); 
+            }
+        </style>
+        <!------------------------------------------------------------->
     </main>
     <footer>
         <p>-------------------------------------------------------------</p>
@@ -23,6 +40,20 @@
         <p>S y D</p>
         <p>CERRADO</p>
     </footer>
+<!-------------------------------------------------------------------------------------------------------->
+    <script>
+        function initMap() {
+
+        var macc = {lat: 42.1382114, lng: -71.5212585};
+
+        var map = new google.maps.Map(
+
+            document.getElementById('map'), {zoom: 15, center: macc});
+
+        var marker = new google.maps.Marker({position: macc, map: map});
+
+        }
+    </script>
 <!-------------------------------------------------------------------------------------------------------->
     <!-- BOTÓN DEL MENÚ -->
     <button class="openbtn" onclick="openNav()">☰ MENÚ</button>  
