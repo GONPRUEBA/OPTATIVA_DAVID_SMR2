@@ -18,6 +18,10 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam aliquam reiciendis consequuntur beatae quidem debitis, ipsa natus unde. Aperiam esse pariatur praesentium debitis reiciendis quos, facilis doloribus cupiditate qui. Vel?</p>
         <p>Magnam amet repudiandae voluptates odio a nesciunt ipsa facilis explicabo quisquam libero. Debitis labore quae eius deserunt veniam iusto consequuntur dicta numquam, incidunt, necessitatibus deleniti accusamus ea nemo eaque? Nesciunt.</p>
         <p>Quidem voluptates animi labore similique omnis delectus sit consequatur, totam non recusandae et corrupti magnam exercitationem dolores suscipit, tempore quia? Dolore corrupti minus suscipit quaerat ea quia consequuntur dicta numquam.</p>
+
+        <label for="">Elige color</label>
+            <input type="color">
+
     </main>
     
     <footer>
@@ -97,6 +101,7 @@
                 applyTheme('dark');
             }
         });
+
     </script>
 <!-------------------------------------------------------------------------------------------------------->
 <!-------------------------------------------------------------------------------------------------------->
@@ -105,16 +110,18 @@
         :root {
             --bg: #ffffff;
             --text: #111;
-            --header-bg: transparent;
-            --footer-bg: transparent;
-            --menu-bg: rgb(0, 0, 0);
-            --menu-text: #0049d1;
+            --header-bg: #b8b8b9;
+            --footer-bg: #b8b8b9;
+            --menu-bg: #b8b8b9;
+            --menu-text: #000;
             --menu-hover: #f1f1f1;
-            --button-bg: #111;
-            --button-text: #0049d1;
+            --button-bg: #b8b8b9;
+            --button-text: #000;
             --button-hover: #444;
             --mark-bg: #ffff00;
             --mark-text: #000;
+            --borde: 1px solid rgb(0, 0, 0);
+
         }
 
         :root[data-theme="dark"] {
@@ -123,13 +130,14 @@
             --header-bg: #1a1d21;
             --footer-bg: #1a1d21;
             --menu-bg: #1a1d21;
-            --menu-text: #4a7aff;
+            --menu-text: #e6eef6;
             --menu-hover: #e6eef6;
             --button-bg: #2d3136;
-            --button-text: #4a7aff;
+            --button-text: #e6eef6;
             --button-hover: #3d4248;
             --mark-bg: #3d4248;
             --mark-text: #e6eef6;
+            --borde: 1px solid rgb(255, 255, 255);
         }
 
         /* FUENTE PRINCIPAL PARA TODO EL DOCUMENTO */
@@ -245,7 +253,7 @@
             cursor: pointer;
             padding: .6rem 1rem;
             border-radius: 8px;
-            border: 1px solid rgba(0,0,0,0.2);
+            border:var(--borde);
             background: var(--bg);
             color: var(--text);
             font-size: 1rem;
