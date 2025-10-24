@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados del Formulario</title>
     <style>
+        /* MISMO CSS QUE ANTES */
         * {
             margin: 0;
             padding: 0;
@@ -55,10 +56,6 @@
             background-color: #f8f9fa;
         }
 
-        tbody tr:hover {
-            background-color: #e8f4fc;
-        }
-
         .back-button {
             display: inline-block;
             padding: 12px 25px;
@@ -68,40 +65,22 @@
             border-radius: 10px;
             margin-top: 20px;
             font-weight: bold;
-            text-align: center;
-        }
-
-        .back-button:hover {
-            opacity: 0.9;
         }
 
         .error {
             color: #e74c3c;
             text-align: center;
             padding: 20px;
-            font-size: 1.1em;
         }
 
         .hidden {
             display: none;
         }
-
-        /* Estilos para el debug */
-        .debug-info {
-            background: #f8f9fa;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-            border-left: 4px solid #3498db;
-            font-family: monospace;
-            font-size: 14px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-
-        <div id="contenido-resultados" class="hidden">
+        <div id="contenido-resultados">
             <h1>Datos del Formulario Recibidos</h1>
             <table>
                 <thead>
@@ -113,33 +92,33 @@
                 <tbody>
                     <tr>
                         <td><strong>Nombre</strong></td>
-                        <td id="td-nombre">-</td>
+                        <td id="td-nombre"></td>
                     </tr>
                     <tr>
                         <td><strong>Email</strong></td>
-                        <td id="td-email">-</td>
+                        <td id="td-email"></td>
                     </tr>
                     <tr>
                         <td><strong>Teléfono</strong></td>
-                        <td id="td-telefono">-</td>
+                        <td id="td-telefono"></td>
                     </tr>
                     <tr>
                         <td><strong>Ciudad</strong></td>
-                        <td id="td-ciudad">-</td>
+                        <td id="td-ciudad"></td>
                     </tr>
                     <tr>
                         <td><strong>Turno</strong></td>
-                        <td id="td-turno">-</td>
+                        <td id="td-turno"></td>
                     </tr>
                     <tr>
                         <td><strong>Intereses</strong></td>
-                        <td id="td-intereses">-</td>
+                        <td id="td-intereses"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div id="sin-datos" class="error">
+        <div id="sin-datos" class="error hidden">
             <h1>No hay datos para mostrar</h1>
             <p>Por favor, completa el formulario primero.</p>
         </div>
@@ -153,12 +132,6 @@
         // Obtener parámetros de la URL
         const urlParams = new URLSearchParams(window.location.search);
         
-        // Debug info
-        document.getElementById('debug-url').textContent = window.location.href;
-        document.getElementById('debug-params').textContent = urlParams.toString();
-
-        console.log('Parámetros GET:', urlParams.toString());
-        
         // Mapeo de valores para mostrar más legibles
         const turnos = {
             'mañana': 'Mañana',
@@ -166,11 +139,14 @@
             'online': 'Online'
         };
 
-        // Verificar si hay parámetros en la URL
+        const interesesMap = {
+            'redes': 'Redes',
+            'hardware': 'Hardware',
+            'web': 'Web'
+        };
+
         if (urlParams.toString()) {
-            console.log('Parámetros encontrados');
-            
-            // Mostrar datos en la tabla
+            // Mostrar datos
             document.getElementById('td-nombre').textContent = urlParams.get('nombre') || 'No especificado';
             document.getElementById('td-email').textContent = urlParams.get('email') || 'No especificado';
             document.getElementById('td-telefono').textContent = urlParams.get('telefono') || 'No especificado';
@@ -180,30 +156,20 @@
             const turno = urlParams.get('turno');
             document.getElementById('td-turno').textContent = turnos[turno] || 'No especificado';
             
-            // Procesar intereses - CORREGIDO para checkboxes individuales
+            // Procesar intereses (pueden venir múltiples)
+            const interesesParams = urlParams.getAll('intereses[]');
             let interesesTexto = 'Ninguno';
-            const interesesSeleccionados = [];
-            
-            // Verificar cada checkbox individualmente
-            if (urlParams.get('intereses') === 'redes') interesesSeleccionados.push('Redes');
-            if (urlParams.get('intereses') === 'hardware') interesesSeleccionados.push('Hardware');
-            if (urlParams.get('intereses') === 'web') interesesSeleccionados.push('Web');
-            
-            // Para múltiples checkboxes (si los nombres son iguales, se sobreescriben)
-            // Esta es una limitación de GET con checkboxes
-            if (interesesSeleccionados.length > 0) {
-                interesesTexto = interesesSeleccionados.join(', ');
+            if (interesesParams.length > 0) {
+                interesesTexto = interesesParams.map(int => interesesMap[int] || int).join(', ');
             }
-            
             document.getElementById('td-intereses').textContent = interesesTexto;
             
-            // Mostrar contenido de resultados y ocultar mensaje de error
+            // Mostrar contenido de resultados
             document.getElementById('contenido-resultados').classList.remove('hidden');
             document.getElementById('sin-datos').classList.add('hidden');
             
         } else {
-            console.log('No hay parámetros en la URL');
-            // No hay datos, mostrar error y ocultar resultados
+            // No hay datos, mostrar error
             document.getElementById('contenido-resultados').classList.add('hidden');
             document.getElementById('sin-datos').classList.remove('hidden');
         }

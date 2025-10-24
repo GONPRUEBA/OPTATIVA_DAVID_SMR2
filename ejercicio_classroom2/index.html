@@ -13,30 +13,37 @@
     </header>
     <main>
         <div>
-            <form action="./resultado.html" method="get" autocomplete="on">
-                <label for="">Nombre</label>
-                    <input type="text" required minlength="2">
-                <label for="">email</label>
-                    <input type="email" name="" id="">
-                <label for="">Teléfono</label>
-                    <input type="tel" name="" id="" pattern="[0-9 +()-]{7,20}">
+            <form action="resultado.html" method="get" autocomplete="on">
+                <!-- Nombre -->
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" required minlength="2">
+                
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                
+                <!-- Teléfono -->
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" pattern="[0-9 +()-]{7,20}">
 
-                <!--  -->
-                <label for="">Ciudad</label>
-                    <input type="text" list="ciudades" >
+                <!-- Ciudad -->
+                <label for="ciudad">Ciudad</label>
+                <input type="text" name="ciudad" id="ciudad" list="ciudades">
                 <datalist id="ciudades">
                     <option value="Madrid"></option>
                     <option value="Barcelona"></option>
                     <option value="Valencia"></option>
                 </datalist>
-                <!--  -->
+
+                <!-- Turno -->
                 <label for="turno">Turno</label>
-                <select name="turno" id="turno" aria-placeholder="disabled" >
+                <select name="turno" id="turno">
                     <option value="mañana">Mañana</option>
                     <option value="tarde" selected>Tarde</option>
-                    <option value="online">OnLine</option>
+                    <option value="online">Online</option>
                 </select>
-                <!--  -->
+
+                <!-- Intereses - CAMBIO IMPORTANTE -->
                 <fieldset>
                     <legend>Intereses</legend>
                     
@@ -52,11 +59,15 @@
                     <input type="checkbox" id="web" name="intereses" value="web">
                     <label for="web">Web</label>
                 </fieldset>
-        </div>
 
-        <div class="botones">
-            <button type="submit" class="button"><span>Enviar</span></button>
-            <button type="reset">Borrar</button>
+                <!-- Botones -->
+                <div class="botones">
+                    <button type="submit" class="button">
+                        <span>Enviar</span>
+                    </button>
+                    <button type="reset">Borrar</button>
+                </div>
+            </form>
         </div>
 
         <div>
