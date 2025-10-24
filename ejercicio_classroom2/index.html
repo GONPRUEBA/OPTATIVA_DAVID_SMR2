@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ejercicio_classroom2</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
@@ -12,21 +13,97 @@
     </header>
     <main>
         <div>
-            <form action="resultado.html" method="get" autocomplete="on">
+            <form action="./resultado.html" method="get" autocomplete="on">
                 <label for="">Nombre</label>
                     <input type="text" required minlength="2">
                 <label for="">email</label>
                     <input type="email" name="" id="">
                 <label for="">Teléfono</label>
                     <input type="tel" name="" id="" pattern="[0-9 +()-]{7,20}">
+
+                <!--  -->
                 <label for="">Ciudad</label>
                     <input type="text" list="ciudades" >
                 <datalist id="ciudades">
                     <option value="Madrid"></option>
-                    <option value="Barcelo"></option>
+                    <option value="Barcelona"></option>
                     <option value="Valencia"></option>
                 </datalist>
+                <!--  -->
+                <label for="turno">Turno</label>
+                <select name="turno" id="turno" aria-placeholder="disabled" >
+                    <option value="mañana">Mañana</option>
+                    <option value="tarde" selected>Tarde</option>
+                    <option value="online">OnLine</option>
+                </select>
+                <!--  -->
+                <fieldset>
+                    <legend>Intereses</legend>
+                    
+                    <!-- Checkbox 1 -->
+                    <input type="checkbox" id="redes" name="intereses" value="redes">
+                    <label for="redes">Redes</label>
+                    
+                    <!-- Checkbox 2 -->
+                    <input type="checkbox" id="hardware" name="intereses" value="hardware">
+                    <label for="hardware">Hardware</label>
+                    
+                    <!-- Checkbox 3 -->
+                    <input type="checkbox" id="web" name="intereses" value="web">
+                    <label for="web">Web</label>
+                </fieldset>
         </div>
+
+        <div class="botones">
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+        </div>
+
+        <div>
+            <table>
+                    <caption>Asistentes Registrados</caption>
+                    
+                    <!-- CABECERA -->
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Ciudad</th>
+                            <th scope="col">Turno</th>
+                        </tr>
+                    </thead>
+                    
+                    <!-- CUERPO CON DATOS -->
+                    <tbody>
+                        <tr>
+                            <th scope="row">Ana García</th>
+                            <td>Mañana</td>
+                            <td>Madrid</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Carlos López</th>
+                            <td>Tarde</td>
+                            <td>Barcelona</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">María Rodríguez</th>
+                            <td>Online</td>
+                            <td>Valencia</td>
+                        </tr>
+                    </tbody>
+                    
+                    <!-- PIE DE TABLA -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Total de alumnos: 3</td>
+                        </tr>
+                    </tfoot>
+            </table>
+        </div>
+
+
+
 
     </main>
     <footer>
