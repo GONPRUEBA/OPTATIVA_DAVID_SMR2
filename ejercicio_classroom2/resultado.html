@@ -85,22 +85,10 @@
         .hidden {
             display: none;
         }
-
-        /* Estilos para el debug */
-        .debug-info {
-            background: #f8f9fa;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-            border-left: 4px solid #3498db;
-            font-family: monospace;
-            font-size: 14px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-
         <div id="contenido-resultados" class="hidden">
             <h1>Datos del Formulario Recibidos</h1>
             <table>
@@ -153,12 +141,6 @@
         // Obtener parámetros de la URL
         const urlParams = new URLSearchParams(window.location.search);
         
-        // Debug info
-        document.getElementById('debug-url').textContent = window.location.href;
-        document.getElementById('debug-params').textContent = urlParams.toString();
-
-        console.log('Parámetros GET:', urlParams.toString());
-        
         // Mapeo de valores para mostrar más legibles
         const turnos = {
             'mañana': 'Mañana',
@@ -168,8 +150,6 @@
 
         // Verificar si hay parámetros en la URL
         if (urlParams.toString()) {
-            console.log('Parámetros encontrados');
-            
             // Mostrar datos en la tabla
             document.getElementById('td-nombre').textContent = urlParams.get('nombre') || 'No especificado';
             document.getElementById('td-email').textContent = urlParams.get('email') || 'No especificado';
@@ -180,7 +160,7 @@
             const turno = urlParams.get('turno');
             document.getElementById('td-turno').textContent = turnos[turno] || 'No especificado';
             
-            // Procesar intereses - CORREGIDO para checkboxes individuales
+            // Procesar intereses
             let interesesTexto = 'Ninguno';
             const interesesSeleccionados = [];
             
@@ -189,8 +169,6 @@
             if (urlParams.get('intereses') === 'hardware') interesesSeleccionados.push('Hardware');
             if (urlParams.get('intereses') === 'web') interesesSeleccionados.push('Web');
             
-            // Para múltiples checkboxes (si los nombres son iguales, se sobreescriben)
-            // Esta es una limitación de GET con checkboxes
             if (interesesSeleccionados.length > 0) {
                 interesesTexto = interesesSeleccionados.join(', ');
             }
@@ -202,7 +180,6 @@
             document.getElementById('sin-datos').classList.add('hidden');
             
         } else {
-            console.log('No hay parámetros en la URL');
             // No hay datos, mostrar error y ocultar resultados
             document.getElementById('contenido-resultados').classList.add('hidden');
             document.getElementById('sin-datos').classList.remove('hidden');
