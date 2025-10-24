@@ -3,94 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados del Formulario</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-
-        thead th {
-            background-color: #2c3e50;
-            color: white;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        tbody tr:hover {
-            background-color: #e8f4fc;
-        }
-
-        .back-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            margin-top: 20px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .back-button:hover {
-            opacity: 0.9;
-        }
-
-        .error {
-            color: #e74c3c;
-            text-align: center;
-            padding: 20px;
-            font-size: 1.1em;
-        }
-
-        .hidden {
-            display: none;
-        }
-    </style>
+    <title>RESULTADO FORMULARIO</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
         <div id="contenido-resultados" class="hidden">
-            <h1>Datos del Formulario Recibidos</h1>
+            <h1>DATOS RECIBIDOS</h1>
             <table>
                 <thead>
                     <tr>
@@ -132,58 +52,13 @@
             <p>Por favor, completa el formulario primero.</p>
         </div>
 
-        <div style="text-align: center;">
-            <a href="index.html" class="back-button">Volver al Formulario</a>
+        <div class="botones">
+            <a href="./index.html" class="button">
+            <span>Volver al Formulario</span>
+            </a>
         </div>
     </div>
 
-    <script>
-        // Obtener parámetros de la URL
-        const urlParams = new URLSearchParams(window.location.search);
-        
-        // Mapeo de valores para mostrar más legibles
-        const turnos = {
-            'mañana': 'Mañana',
-            'tarde': 'Tarde', 
-            'online': 'Online'
-        };
-
-        // Verificar si hay parámetros en la URL
-        if (urlParams.toString()) {
-            // Mostrar datos en la tabla
-            document.getElementById('td-nombre').textContent = urlParams.get('nombre') || 'No especificado';
-            document.getElementById('td-email').textContent = urlParams.get('email') || 'No especificado';
-            document.getElementById('td-telefono').textContent = urlParams.get('telefono') || 'No especificado';
-            document.getElementById('td-ciudad').textContent = urlParams.get('ciudad') || 'No especificado';
-            
-            // Procesar turno
-            const turno = urlParams.get('turno');
-            document.getElementById('td-turno').textContent = turnos[turno] || 'No especificado';
-            
-            // Procesar intereses
-            let interesesTexto = 'Ninguno';
-            const interesesSeleccionados = [];
-            
-            // Verificar cada checkbox individualmente
-            if (urlParams.get('intereses') === 'redes') interesesSeleccionados.push('Redes');
-            if (urlParams.get('intereses') === 'hardware') interesesSeleccionados.push('Hardware');
-            if (urlParams.get('intereses') === 'web') interesesSeleccionados.push('Web');
-            
-            if (interesesSeleccionados.length > 0) {
-                interesesTexto = interesesSeleccionados.join(', ');
-            }
-            
-            document.getElementById('td-intereses').textContent = interesesTexto;
-            
-            // Mostrar contenido de resultados y ocultar mensaje de error
-            document.getElementById('contenido-resultados').classList.remove('hidden');
-            document.getElementById('sin-datos').classList.add('hidden');
-            
-        } else {
-            // No hay datos, mostrar error y ocultar resultados
-            document.getElementById('contenido-resultados').classList.add('hidden');
-            document.getElementById('sin-datos').classList.remove('hidden');
-        }
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
