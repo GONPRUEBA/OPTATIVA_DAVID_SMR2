@@ -1,0 +1,26 @@
+.container{
+    /* TODAS LAS CAJAS TIENEN ANCO Y ALTO */
+    width: 100%;
+    height: 100vh;
+
+    background-color: black;
+
+    display: flex;
+    flex-direction: row;
+    /* AFECTA AL EJE PRINCIPAL */
+    justify-content: center;   
+    align-items: center;
+}
+
+.rectangulo{
+    width: 25%;
+    height: 25vh;
+    background-color: yellow;
+}
+
+
+
+/* .(PUNTO) = CLASES */
+/* # id = IDENTIFICADORES */
+/* ancho = se trabaja en % */
+/* alto = se trabaja en vh  */

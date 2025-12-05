@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Sugerencias - IES Tecnológico SMR.</title>
+    <link rel="shortcut icon" href="./images/rosquilla.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- NAVEGADOR -->
+        <nav>
+            <a href="./index.html">INICIO</a>
+            <a href="./reserva_aulas.html">RESERVA</a>
+            <a href="./preferencias_smr.html">PREFERENCIAS SMR</a>
+            <a href="./contacto_sugerencias.html">CONTACTO</a>
+        </nav>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <!-- TITULO Y ESO -->
+        <section>
+            <h1>Contacto y Sugerencias</h1>
+            <p>Aqui podeis enviar dudas, comentarios...</p>
+        </section>
+        <form action="">
+            <!-- NOMBRE -->
+            <label for="">Nombre: </label>
+                <input type="text" name="nombre" pattern="[A-Z, a-z]+" minlength="3" maxlength="15" required>
+            <!-- EMAIL -->
+            <label for="">Email: </label>
+                <input type="email" name="email" id="email" required>
+            <!-- OPCIONES PARA QUE ESCRIBE -->
+            <select name="tipo_mensaje" id="">
+                <option value="duda">Duda</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="queja">Queja</option>
+                <option value="otro" id="opa">Otro</option>
+            </select>
+            <!-- COMENTARIO -->
+            <textarea name="" id="" style="resize: none;"></textarea>
+            <!-- BOTON ENVIO -->
+             <button type="submit">ENVIAR</button>
+        </form>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy;Gonzalo</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,2 @@
+SITIRLIN: docker run -d -p 8001:8080 frooodle/s-pdf:latest
+IT-TOOLS: docker run -d --name it-tools --restart unless-stopped -p 8080:80 corentinth/it-tools:latest

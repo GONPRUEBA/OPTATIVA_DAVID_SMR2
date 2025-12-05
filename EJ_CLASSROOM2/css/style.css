@@ -1,0 +1,551 @@
+/* style.css - Estilos completos para el ejercicio */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS DEL BODY */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* CSS DEL HEADER */
+header {
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* CSS DEL MAIN */
+main {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* CSS DEL LOGO */
+#LOGO{
+    width: 200px;
+    height: 200px;
+}
+
+/* CSS DEL FORMULARIO */
+form {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Fieldset??? */
+fieldset {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+legend {
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 0 10px;
+}
+
+/* CHECKBOX */
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+/* BOTONES */
+.botones {
+    text-align: center;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Botones normales */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-width: 120px;
+}
+
+button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #219a52;
+}
+
+button[type="reset"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: #c0392b;
+}
+
+/* BOTON ENVIAR*/
+.button {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    min-width: 120px;
+    display: inline-block;
+    text-align: center;
+}
+
+.button span {
+    position: relative;
+    z-index: 1;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: #272727;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+
+.button:hover::before {
+    opacity: 0.7;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    border-radius: 9px;
+    transition: 0.5s;
+    opacity: 0;
+    filter: blur(20px);
+}
+
+.button:hover::after {
+    opacity: 1;
+}
+
+/* BOTON VOLVER */
+.back-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 120px;
+    transition: opacity 0.3s;
+}
+
+.back-button:hover {
+    opacity: 0.9;
+}
+
+/* BOTON DELETE */ 
+.reset {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  gap: 1px;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.reset:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+  gap: 0;
+}
+
+.reset:hover .bin-bottom {
+  width: 50px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+}
+
+.bin-top {
+  transform-origin: bottom right;
+}
+
+.reset:hover .bin-top {
+  width: 50px;
+  transition-duration: 0.3s;
+  transform: translateY(60%) rotate(160deg);
+}
+
+.reset::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.reset:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(35px);
+  transition-duration: 0.3s;
+}
+
+/* Responsive?? */
+@media (max-width: 600px) {
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    button, .button, .back-button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+thead {
+    background-color: #34495e;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+thead th {
+    background-color: #2c3e50;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #e8f4fc;
+}
+
+tfoot {
+    background-color: #ecf0f1;
+    font-weight: bold;
+}
+
+tfoot td {
+    text-align: center;
+    background-color: #bdc3c7;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    color: #7f8c8d;
+}
+
+/* Responsive??? */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .botones {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    button {
+        margin: 5px 0;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.help-text {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* ===== ESTILOS PARA RESULTADO.HTML ===== */
+
+/* Container para resultado.html */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* TITULOS */
+.container h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* BOTON VOLVER */
+.back-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.back-button:hover {
+    opacity: 0.9;
+}
+
+/* MENSAJE ERROR */
+.error {
+    color: #e74c3c;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+}
+
+/* Clase para ocultar elementos?? */
+.hidden {
+    display: none;
+}
+
+/* TABLA RESULTADOS */
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.container thead th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.container tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.container tbody tr:hover {
+    background-color: #e8f4fc;
+}
+
+/* BOTON UIVERSE.IO */
+.button {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    min-width: 120px;
+}
+
+.button span {
+    position: relative;
+    z-index: 1;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: #272727;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+
+.button:hover::before {
+    opacity: 0.7;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    border-radius: 9px;
+    transition: 0.5s;
+    opacity: 0;
+    filter: blur(20px);
+}
+
+.button:hover::after {
+    opacity: 1;
+}
+
+/* Responsive para resultado.html?? */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .back-button {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .container th, 
+    .container td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Aulas -IES Tecnológico SMR</title>
+    <link rel="shortcut icon" href="./images/rosquilla.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- NAVEGADOR -->
+        <nav>
+            <a href="./index.html">INICIO</a>
+            <a href="./reserva_aulas.html">RESERVA</a>
+            <a href="./preferencias_smr.html">PREFERENCIAS SMR</a>
+            <a href="./contacto_sugerencias.html">CONTACTO</a>
+        </nav>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <!-- TITULO Y ESO -->
+        <section>
+            <h1>Reserva de aulas de Informática</h1>
+            <p>Aquí deben reservar los profesores las aulas de informática.</p>
+        </section>
+        <!-- FORMULARIO -->
+         <form action="procesar_reserva.php" method="post">
+            <!-- NOMBRE -->
+            <label for="">Nombre del profesor: </label>
+                <input type="text" name="profesor" pattern="[A-Z, a-z]+" minlength="3" maxlength="15" required>
+            <!-- EMAIL -->
+            <label for="">Correo de contacto</label>
+                <input type="email" name="correo" id="correo" required>
+            <!-- DESPLEGABLE SENCILLO -->
+            <select name="aula" id="aula">
+                <option value="">Aula 1 (20 PCs)</option>
+                <option value="">Aula 2 (15 PCs)</option>
+                <option value="">Aula 3 (30 PCs)</option>
+            </select>
+            <!-- DESPLEGABLE MULTIPLE -->
+            <select name="turno" id="turno">
+                <optgroup label="Mañana">
+                    <option value="">10:00-11:00</option>
+                    <option value="">12:00-13:00</option>
+                </optgroup>
+                <optgroup label="Tarde">
+                    <option value="">16:00-17:00</option>
+                    <option value="">18:00-19:00</option>
+                </optgroup>
+            </select>
+            <!-- BOTON ENVIO -->
+            <button type="submit">ENVIAR</button>
+            <!-- BOTON RESETEO -->
+             <button type="reset">LIMPIAR</button>
+         </form>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy;Gonzalo</p>
+    </footer>
+</body>
+</html>
