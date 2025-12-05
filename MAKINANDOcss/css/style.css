@@ -67,6 +67,16 @@ button:hover{
 }
 
 
+input{
+    background-color: #a852a9;
+    border-radius: 10px;
+}
+input:focus{
+    background-color: #f9f871;
+    transition: 0.2s;
+}
+
+
 
 
 
