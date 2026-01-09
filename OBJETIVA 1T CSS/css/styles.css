@@ -1,5 +1,7 @@
 *{
     margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
@@ -20,7 +22,6 @@ header{
     /* AFECTA AL EJE SECUNDARIO */
     align-items: flex-start; 
 
-    
 }
 main{
     display: flex;
@@ -58,6 +59,7 @@ footer{
     align-items: center; 
 
     color: white;
+    text-decoration: none;
 
 }
 .navegador{
