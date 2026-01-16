@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ejercicio_classroom2</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+ 
+</head>
+<body>
+    <header>
+        <h1>EJERCICIO CLASSROOM2</h1>
+        <p>CON CSS GUAPO Y JS</p>
+        <img src="./images/logo.png" alt="LOGO DE TRABAJO" loading="lazy " id="LOGO" name="LOGO">
+    </header>
+    <main>
+        <div>
+            <form action="resultado.html" method="get" autocomplete="on">
+                <!-- NOMBRE -->
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" required minlength="2" aria-describedby="nombre-ayuda">
+                <small id="nombre-ayuda" class="help-text">AQUI PONES TU NOMBRE</small>
+                
+                <!-- EMAIL -->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                
+                <!-- TELEFONO -->
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" pattern="[0-9 +()-]{7,20}">
+
+                <!-- CIUDAD -->
+                <label for="ciudad">Ciudad</label>
+                <input type="text" name="ciudad" id="ciudad" list="ciudades">
+                <datalist id="ciudades">
+                    <option value="Madrid"></option>
+                    <option value="Barcelona"></option>
+                    <option value="Valencia"></option>
+                </datalist>
+
+                <!-- TURNO -->
+                <label for="turno">Turno</label>
+                <select name="turno" id="turno">
+                    <option value="mañana">Mañana</option>
+                    <option value="tarde" selected>Tarde</option>
+                    <option value="online">Online</option>
+                </select>
+
+                <!-- INTERESES -->
+                <fieldset>
+                    <legend>Intereses</legend>
+                    
+                    <!-- CHECKBOX 1 -->
+                    <input type="checkbox" id="redes" name="intereses" value="redes">
+                    <label for="redes">Redes</label>
+                    
+                    <!-- CHECKBOX 2 -->
+                    <input type="checkbox" id="hardware" name="intereses" value="hardware">
+                    <label for="hardware">Hardware</label>
+                    
+                    <!-- CHECKBOX 3 -->
+                    <input type="checkbox" id="web" name="intereses" value="web">
+                    <label for="web">Web</label>
+                </fieldset>
+
+                <!-- BOTONES -->
+                <div class="botones">
+                    <button type="submit" class="button">
+                        <span>Enviar</span>
+                    </button>
+                    <button class="reset" type="reset">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 69 14"
+                            class="svgIcon bin-top"
+                        >
+                            <g clip-path="url(#clip0_35_24)">
+                            <path
+                                fill="black"
+                                d="M20.8232 2.62734L19.9948 4.21304C19.8224 4.54309 19.4808 4.75 19.1085 4.75H4.92857C2.20246 4.75 0 6.87266 0 9.5C0 12.1273 2.20246 14.25 4.92857 14.25H64.0714C66.7975 14.25 69 12.1273 69 9.5C69 6.87266 66.7975 4.75 64.0714 4.75H49.8915C49.5192 4.75 49.1776 4.54309 49.0052 4.21305L48.1768 2.62734C47.3451 1.00938 45.6355 0 43.7719 0H25.2281C23.3645 0 21.6549 1.00938 20.8232 2.62734ZM64.0023 20.0648C64.0397 19.4882 63.5822 19 63.0044 19H5.99556C5.4178 19 4.96025 19.4882 4.99766 20.0648L8.19375 69.3203C8.44018 73.0758 11.6746 76 15.5712 76H53.4288C57.3254 76 60.5598 73.0758 60.8062 69.3203L64.0023 20.0648Z"
+                            ></path>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_35_24">
+                                <rect fill="white" height="14" width="69"></rect>
+                            </clipPath>
+                            </defs>
+                        </svg>
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 69 57"
+                            class="svgIcon bin-bottom"
+                        >
+                            <g clip-path="url(#clip0_35_22)">
+                            <path
+                                fill="black"
+                                d="M20.8232 -16.3727L19.9948 -14.787C19.8224 -14.4569 19.4808 -14.25 19.1085 -14.25H4.92857C2.20246 -14.25 0 -12.1273 0 -9.5C0 -6.8727 2.20246 -4.75 4.92857 -4.75H64.0714C66.7975 -4.75 69 -6.8727 69 -9.5C69 -12.1273 66.7975 -14.25 64.0714 -14.25H49.8915C49.5192 -14.25 49.1776 -14.4569 49.0052 -14.787L48.1768 -16.3727C47.3451 -17.9906 45.6355 -19 43.7719 -19H25.2281C23.3645 -19 21.6549 -17.9906 20.8232 -16.3727ZM64.0023 1.0648C64.0397 0.4882 63.5822 0 63.0044 0H5.99556C5.4178 0 4.96025 0.4882 4.99766 1.0648L8.19375 50.3203C8.44018 54.0758 11.6746 57 15.5712 57H53.4288C57.3254 57 60.5598 54.0758 60.8062 50.3203L64.0023 1.0648Z"
+                            ></path>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_35_22">
+                                <rect fill="white" height="57" width="69"></rect>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- TABLA EJEMPLO -->
+        <div>
+            <table>
+                    <caption>TABLA EJEMPLO</caption>
+                    
+                    <!-- CABECERA -->
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Ciudad</th>
+                            <th scope="col">Turno</th>
+                        </tr>
+                    </thead>
+                    
+                    <!-- CUERPO CON DATOS -->
+                    <tbody>
+                        <tr>
+                            <td scope="row"><strong>Ana</strong></td>
+                            <td>admin@example.com</td>
+                            <td>666 666 666</td>
+                            <td>Madrid</td>
+                            <td>Mañana</td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><strong>Alex</strong></td>
+                            <td>admin@example.com</td>
+                            <td>777 777 777</td>
+                            <td>Ávila</td>
+                            <td>OnLine</td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><strong>Luis</strong></td>
+                            <td>admin@example.com</td>
+                            <td>666 666 666</td>
+                            <td>Madrid</td>
+                            <td>Tarde</td>
+                        </tr>
+                    </tbody>
+                    
+                    <!-- PIE DE TABLA -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Total de alumnos: 3</td>
+                        </tr>
+                    </tfoot>
+            </table>
+        </div>
+
+
+
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

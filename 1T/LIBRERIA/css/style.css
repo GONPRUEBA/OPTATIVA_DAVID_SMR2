@@ -1,0 +1,22 @@
+header{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+main{
+    background-color:yellow;
+}
+footer{
+    background-color: #ff0000;
+}
+aside{
+    background-color: black;
+}
+
+/* ROW      HORIZONTAL  VERTICAL*/
+/* COLUMN   VERTICAL    HORIZONTAL */
+
+/* JUSTIFY-CONTENT PRINCIPAL */
+/* ALIGN-ITEMS SECUNDARIO */

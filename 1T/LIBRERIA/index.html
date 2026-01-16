@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Libreria</title>
+
+</head>
+<body>
+
+
+    <header>
+        <!-- IMAGEN DEL LOGO -->
+        <figure>
+            <img src="./images/libro.png" alt="LOGO LIBRERIA" class="LOGO">
+        </figure>
+        <!-- NAVEGADOR -->
+        <nav>
+            <div">
+                <a href="./index.html">Home</a>
+                <a href="./top40.html">Top 40</a>
+                <a href="./contacto.html">Contacto</a>
+            </div>
+            <!-- BOTON INICIAR SESION -->
+            <a href="./login.html"><button>Iniciar Sesión</button></a>
+        </nav>
+    </header>
+ 
+    <main>
+
+        <!-- BARRA LATERAL IMAGENES -->
+        <aside>
+            <div>
+                <figure>
+                    <img src="./images/martin.jpg" alt="FACHADA LIBRERIA MARTIN" class="IMG1">
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <img src="./images/club.jpg" alt="VIDEOCLUB AQUI NO HAY QUIEN VIVA" class="IMG2">
+                </figure>
+            </div>
+            <div>
+                <figure>
+                    <img src="./images/mariscos.png" alt="MARISCOS RECIO" class="IMG3">
+                </figure>
+            </div>
+
+        </aside>
+        
+        <!-- TABLA -->
+        <div class="TABLA">
+            <table>
+                <caption><strong>Grandes Exitos</strong></caption>
+                <!-- CABECERA -->
+                <thead>
+                    <tr>
+                        <th scope="col">Título</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Disponibilidad</th>
+                    </tr>
+                </thead>
+                <!-- CUERPO -->
+                 <tbody>
+                    <tr>
+                        <td scope="row">powerless</td>
+                        <td scope="row">Lauren Roberts</td>
+                        <td scope="row">4,95€</td>
+                        <td scope="row">dispomible</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">de sangre y cenixas</td>
+                        <td scope="row">Jennifer L.</td>
+                        <td scope="row">6,95€</td>
+                        <td scope="row">no dispomible</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">wtf</td>
+                        <td scope="row">Mother Fucker</td>
+                        <td scope="row">2,95€</td>
+                        <td scope="row">dispomible</td>
+                    </tr>
+                 </tbody>
+            </table>
+        </div>
+
+        <!-- FORMULARIO DE CONTACTO -->
+        <div class="FORMULARIO">
+            <h1>CONTACTO</h1>
+            <form action="">
+                <!-- NOMBRE -->
+                <input type="text" placeholder="Nombre" minlength="3" maxlength="48" pattern="[A-Z  a-z]+">
+                <!-- TELÉFONO -->
+                <input type="tel" placeholder="Teléfono" minlength="9" maxlength="9" pattern="[0-9]">
+                <!-- COMENTARIO -->
+                <textarea name="COMENTARIO" id="COMENTARIO" class="COMENTARIO" placeholder="Escribe tu comentario" cols="50" rows="5"></textarea>
+                <!-- BOTON A PELO -->
+                <button>ENVIAR</button>
+            </form>
+        </div>
+    </main>
+
+
+    <footer>
+        <!-- DEPLEGABLE SENCILLO -->
+        <div class="DESPLEGABLE1">
+            <label for="genero">Género</label>
+            <select name="genero" id="genero">
+                <option value="" disabled selected>Elige un género</option>
+                <option value="">Ciencia Ficción</option>
+                <option value="">Terror</option>
+                <option value="">Amor</option>
+            </select>
+        </div>
+        <!-- DESPLEGABLE MULTIPLE -->
+         <div class="DESPLEGABLE2">
+            <label for="autor">Autor</label>
+            <select name="sutor" id="autor">
+                <optgroup label="Lauren Roberts">
+                    <option value="">powerless</option>
+                    <option value="">powerfull</option>
+                    <option value="">reckless</option>
+                </optgroup>
+                <optgroup label="Jennifer L.">
+                    <option value="">de sangre y cenizas</option>
+                    <option value="">un reino de carne y fuego</option>
+                    <option value="">una corona de huesos dorados</option>
+                </optgroup>
+            </select>
+         </div>  
+    </footer>
+
+</body>
+</html>

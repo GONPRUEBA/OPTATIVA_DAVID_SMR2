@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desplegables</title>
+</head>
+<body>
+    <!-- desplegable sencillo -->
+    <label for="pais">País</label>
+    <select name="pais" id="pais" required>
+        <option value="" disabled selected>Elige un país</option>
+        <option value="es">España</option>
+        <option value="mx">México</option>
+        <option value="fr">francia</option>
+    </select>
+    <!-- desplegable multiple -->
+    <label for="ciudad">Ciudad</label>
+    <select name="ciudad" id="ciudad" required>
+
+        <optgroup label="España">
+            <option value="m">Madrid</option>
+            <option value="b">Barcelona</option>
+        </optgroup>
+ 
+        <optgroup label="México">
+            <option value="cdmx">Ciudad de México</option>
+            <option value="g">Guadalajara</option>
+        </optgroup>
+
+        <optgroup label="francia">
+            <option value="p">París</option>
+            <option value="l">Lyon</option>
+        </optgroup>
+    </select>
+</body>
+</html>
