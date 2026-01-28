@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DNI</title>
     <link rel="stylesheet" href="./styles/style.css">
+</head>
 
 <body>
     <script src="./js/script.js"></script>
@@ -26,51 +27,23 @@
 
     <main>
         <aside class="asideIndex">
-            <button onclick="opa.innerHTML++" class="botonBUY"><p>COMPRAR</p></button>
-            <button onclick="opa.innerHTML--" class="botonSELL"><p>VENDER</p></button>
+            <button id="botonBUY" class="botonBUY" onclick="eliminarAnuncio()"><p>COMPRAR</p></button>
+            <button id="botonSELL" class="botonSELL" onclick="mostrarAnuncio()"><p>VENDER</p></button>
         </aside>
         <div class="pantallaIndex">
-            <h1 id="opa">0</h1>
-            <div class="numero">
-                <h1 id="v">0</h1>
-            </div>
-            <div class="todo">
-                <div class="foto">
-                    <div class="opa1">
-
+            <div class="contenedorANUNCIOS">
+                <div class="anuncio" id="anuncio">
+                    <div class="foto">
+                        <img src="./images/images.webp" alt="foto-abalos" class="fotoANUNCIO">
                     </div>
-                    <div class="opa2">
-
+                    <div class="precio">
+                        <h2 class="precioANUNCIO">300€</h2>
                     </div>
-                    <div class="opa3">
-
-                    </div>
+                    <button class="botonCOMPRAR">COMPRAR</button>
                 </div>
-                <div class="foto">
-                    <div class="opa1">
-
-                    </div>
-                    <div class="opa2">
-
-                    </div>
-                    <div class="opa3">
-
-                    </div>
-                </div>
-                <div class="foto">
-                    <div class="opa1">
-
-                    </div>
-                    <div class="opa2">
-
-                    </div>
-                    <div class="opa3">
-
-                    </div>
 
                 </div>
             </div>
->>>>>>> cabaa2ee978f18662e7043eae215503170692d68
         </div>
     </main>
 
