@@ -1,0 +1,196 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+main{
+    
+
+    width: 100%;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+footer{
+    background-color: #131921;
+
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.D001{
+    background-color: #131921;
+
+    width: 100%;
+    height: 7vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.D002{
+    width: 10%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.I001{
+
+    width: 100%;
+    height: 100%;
+}
+
+.D003{
+
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+.D004{
+    width: 30%;
+    height: 100%;
+}
+
+.D005{
+    background-color: #232F3E;
+
+    width: 100%;
+    height: 3vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    gap: 10%;
+
+    
+}
+
+.T001{
+    color: white;
+    text-decoration: none;
+}
+
+.D006{
+    background-color: white;
+
+    width: 100%;
+    height: 40vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.D007{
+    background-color: red;
+
+    width: 20%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+
+    margin-left: 2%;
+}
+
+.D008{
+    background-color: white;
+
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+.P001{
+    color: black;
+    font-size: 2rem;
+}
+
+.D009{
+    background-color: white;
+
+    width: 100%;
+    height: 45%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content:space-around;
+
+    padding-top: 5%;
+}
+
+.D010{
+    background-color: aqua;
+
+    width: 45%;
+    height: 60%;
+}
+
+.D011{
+    background-color: yellow;
+
+    width: 100%;
+    height: 100%;
+}
+
+.D012{
+
+    background-color: white;
+
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+
+}
+.I002{
+    width: 100%;
+    height: 100%;
+}
+
