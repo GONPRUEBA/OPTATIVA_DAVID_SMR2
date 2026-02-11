@@ -95,14 +95,30 @@ accion.classList.add('fondo-naranja');
 accion.classList.remove('fondo-naranja');
 console.log(accion.classList);
 
-// ----------------------------3.5-----------------------------------
+// ----------------------------3.5------------ENTENDER EST YA-----------------------
 function crearDiv() {
-    const crear1 = document.createElement('div');
-    crear1.className = 'crear1';
-    crear1.innerText = 'Nuevo estado';
-    crear1.className = 'pieza'
-    document.body.appendChild(crear1);
+    const contenedor = document.getElementById('zonaNuevos');
+    const nuevoDiv = document.createElement('div');
+    const contador = contenedor.children.length + 1;
+
+    nuevoDiv.className = 'crear1';
+    nuevoDiv.innerText = `Nuevo estado ${contador}`;
+    nuevoDiv.classList.add('pieza');
+    contenedor.appendChild(nuevoDiv);
 }
 
+console.log('---------------------------------------')
+function eliminarDiv() {
+    const contenedor = document.getElementById('zonaNuevos');
+    if (contenedor.children.length > 0) {
+        const ultimoDiv = contenedor.lastChild;
+        contenedor.removeChild(ultimoDiv);
+    }
+}   
+
+
+// ----------------------------3.6-----------------------------------
+const padre = document.getElementById('listaTareas').parentElement;
+console.log(padre);
 
 
