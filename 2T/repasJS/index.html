@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica DOM - UD 3.1 a 3.7</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 20px;
+      }
+      .wrap {
+        display: grid;
+        gap: 16px;
+        max-width: 980px;
+        margin: 0 auto;
+      }
+      .panel {
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 14px;
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .pieza {
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        user-select: none;
+      }
+      .fondo-naranja {
+        background: #fff2d6;
+      }
+      .fondo-negro {
+        background: #222;
+        color: #fff;
+        border-color: #222;
+      }
+      .oculto {
+        display: none;
+      }
+      .seleccionada {
+        outline: 3px solid #4f46e5;
+      }
+      .mini {
+        font-size: 12px;
+        color: #555;
+      }
+      .ok {
+        color: #0a7;
+        font-weight: 700;
+      }
+      .warn {
+        color: #c60;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="wrap">
+      <header class="panel">
+        <h1 id="titulo">Taller DOM (UD 3.1 → 3.7)</h1>
+        <p id="subtitulo" class="mini">
+          Practica: seleccionar, modificar, recorrer, crear/eliminar y eventos.
+        </p>
+      </header>
+
+      <section class="panel" id="acceso">
+        <h2>Zona A: Acceso a elementos</h2>
+        <div class="row">
+          <button id="btnAccion" class="pieza fondo-naranja">Botón Acción</button>
+          <button id="btnReset" class="pieza">Reset</button>
+          <input id="campoTexto" type="text" placeholder="Escribe algo..." />
+          <span id="estado" class="mini">Estado: esperando…</span>
+        </div>
+      </section>
+
+      <section class="panel" id="listaPanel">
+        <h2>Zona B: Lista (clases / eventos)</h2>
+        <p class="mini">Haz clic en cualquier elemento de la lista.</p>
+        <ul id="listaTareas">
+          <li class="item pieza fondo-naranja" data-id="t1">Tarea 1</li>
+          <li class="item pieza" data-id="t2">Tarea 2</li>
+          <li class="item pieza fondo-naranja" data-id="t3">Tarea 3</li>
+          <li class="item pieza fondo-negro" data-id="t4">Tarea 4</li>
+        </ul>
+      </section>
+
+      <section class="panel" id="atributosPanel">
+        <h2>Zona C: Atributos</h2>
+        <a id="linkDoc" href="https://example.com" target="_blank" title="Enlace de ejemplo">Abrir documentación</a>
+        <p class="mini" id="atributosInfo">Atributos: —</p>
+      </section>
+
+      <section class="panel" id="domPanel">
+        <h2>Zona D: Crear / eliminar + recorrer DOM</h2>
+        <div class="row">
+          <button id="btnCrear" class="pieza" onclick="crearDiv()">Crear elemento</button>
+          <button id="btnEliminar" class="pieza">Eliminar último</button>
+        </div>
+
+        <div id="contenedor" class="panel">
+          <h3 id="tituloContenedor">Contenedor</h3>
+          <p class="mini">Aquí aparecerán elementos nuevos.</p>
+          <div id="zonaNuevos" class="row"></div>
+        </div>
+
+        <p class="mini" id="infoRecorrido">Recorrido DOM: —</p>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
