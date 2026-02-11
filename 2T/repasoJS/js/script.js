@@ -119,6 +119,17 @@ function eliminarDiv() {
 
 // ----------------------------3.6-----------------------------------
 const padre = document.getElementById('listaTareas').parentElement;
-console.log(padre);
+const hijos = document.getElementById('listaTareas').children;
+console.log(padre.parentElement);
+console.log(padre.childElementCount);
+
+if (hijos.length > 0) {
+    hijos[0].classList.add('seleccionada');
+}
 
 
+const lista2 = document.querySelectorAll('li');
+lista2[1].previousElementSibling.classList.add('fondo-negro')
+lista2[1].nextElementSibling.classList.add('fondo-negro')
+
+// ----------------------------3.7-----------------------------------
