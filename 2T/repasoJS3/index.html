@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica 3 - DOM (UD 3.1 a 3.7)</title>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; padding: 20px; }
+        .card { border: 1px solid #ccc; border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+        .chip { padding: 10px; border: 1px solid #bbb; border-radius: 999px; display: inline-block; margin: 6px 6px 0 0; cursor: pointer; }
+        .tone-amber { background: #ffe8c7; }
+        .tone-dark { background: #222; color: #fff; }
+        .small { font-size: 12px; color: #555; }
+    </style>
+    </head>
+
+
+    <body>
+    <h1 id="cabecera">Práctica 3 — DOM</h1>
+    <p id="descripcion" class="small">Zona de pruebas para DOM y eventos.</p>
+
+
+    <section class="card" id="panelSelectores">
+        <h2>Panel 1: Selectores</h2>
+
+
+        <div>
+        <span id="etqA" class="chip tone-amber">Etiqueta A</span>
+        <span id="etqB" class="chip">Etiqueta B</span>
+        <span id="etqC" class="chip tone-amber">Etiqueta C</span>
+        <span id="etqD" class="chip tone-dark">Etiqueta D</span>
+        </div>
+
+
+        <p class="small" id="resultado">Resultado: esperando…</p>
+    </section>
+
+
+    <section class="card" id="panelAttrs">
+        <h2>Panel 2: Atributos</h2>
+        <a id="enlaceAyuda" href="https://example.com" target="_blank" title="Enlace original">Abrir ayuda</a>
+        <p class="small" id="attrsOut">Atributos: —</p>
+    </section>
+
+
+    <section class="card" id="panelLista">
+        <h2>Panel 3: Lista</h2>
+        <ul id="menu">
+        <li class="opcion tone-amber">Opción 1</li>
+        <li class="opcion">Opción 2</li>
+        <li class="opcion tone-amber">Opción 3</li>
+        <li class="opcion tone-dark">Opción 4</li>
+        </ul>
+    </section>
+
+
+    <section class="card" id="panelBuild">
+        <h2>Panel 4: Crear / eliminar</h2>
+        <button id="btnAdd" onclick="crearElemento()">Añadir</button>
+        <button id="btnDel" onclick="borrarElemento()">Borrar</button>
+        <div id="zonaBuild"></div>
+    </section>
+
+
+    <section class="card" id="panelEvents">
+        <h2>Panel 5: Eventos</h2>
+        <button id="btnRun">Ejecutar</button>
+        <input id="entrada" type="text" placeholder="Escribe aquí..." />
+
+
+        <div class="chip tone-amber" onclick="accionDirecta('Has pulsado el elemento con onclick')">
+        Evento inline (onclick)
+        </div>
+    </section>
+
+
+    <script src="./script.js"></script>
+    </body>
+</html>
