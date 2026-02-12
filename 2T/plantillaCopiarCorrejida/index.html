@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba optativa</title>
+    <link rel="stylesheet" href="./css/style.css">
+<body>
+    <!-- Empieza el header -->
+    <header>
+        <div class="navegacion" id="enlaces">
+            <a href="index.html">HOME</a>
+            <a href="https://www.google.com/?hl=es">GOOGLE</a>
+        </div>
+
+        <div class="registro">
+            <form action="formulario.html" method="get">
+
+                <label for="">Usuario</label>
+                <input type="text" required>
+            
+
+                <label for="">Contraseña</label>
+                <input type="password" required>
+        
+            <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Empieza el main -->
+    <main>
+        <div class="principal">
+            <h1>GALERIA DE IMAGENES</h1>
+
+            <div class="amarillo">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quam ullam
+                dolores in iste tempore nostrum eaque facere, doloremque quibusdam nesciunt sit fugit Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quo, qui non quas pariatur incidunt fuga laborum ab ratione repellat, dolorum reprehenderit voluptatem veritatis dolore fugit! Alias fugiat obcaecati eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestias sapiente temporibus vero ratione, atque tempora maiores ab quam quisquam. Quibusdam incidunt voluptate sunt perferendis voluptas. Quis culpa incidunt tempora! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis unde rem blanditiis nostrum facere praesentium est mollitia asperiores consequuntur accusantium amet molestiae saepe quaerat, doloremque expedita exercitationem ipsam id hic?</p>
+            </div>
+
+            <!-- Galeria de imagenes -->
+            <div class="imagenes">
+
+                <div class="imagen">
+                    <figure><img src="./images/imagen1.jpg" alt="Imagen de una persona
+                    escribiendo" class="imagen"></figure>
+                </div>
+
+                <div class="imagen">
+                    <figure><img src="./images/imagen2.jpg" alt="imagen de una persona
+                    escribiendo de cerca" class="imagen"></figure>
+                </div>
+
+                <div class="imagen">
+                    <figure><img src="./images/imagen3.jpg" alt="Imagen de una persona estudiando
+                    con el ordenador" class="imagen"></figure>
+                </div>
+            </div>
+        </div>
+        <!-- Barra lateral -->
+        <aside>
+            <div class="botones">
+                <div class="boton_rojo examen izai ">
+                    Mostrar imagen 1
+                </div>
+                
+                <div class="boton_rojo examen cooked izai" onclick="mostrarCooked()">
+                    Mostrar imagen 2
+                </div>
+
+                <div class="boton_rojo">
+                    Mostrar imagen 3
+                </div>
+            </div>
+            
+        </aside>
+    </main>
+
+    <!-- Empieza el footer -->
+    <footer>
+        <h3>Autor:Alvaro Castro-Evidencia 1T</h3>
+    </footer>
+    <script src="./js/script.js"></script>
+</head>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Práctica 2 - DOM (UD 3.1 a 3.7)</title>
+        <style>
+            body { font-family: Arial, Helvetica, sans-serif; padding: 20px; }
+            .bloque { border: 1px solid #ccc; border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+            .pieza { padding: 10px; border: 1px solid #bbb; border-radius: 8px; display: inline-block; margin: 6px 6px 0 0; cursor: pointer; }
+            .fondo-naranja { background: #ffe7c2; }
+            .fondo-negro { background: #222; color: white; }
+            .mini { font-size: 12px; color: #555; }
+        </style>
+    </head>
+
+
+    <body>
+    <h1 id="titulo">Práctica 2 — DOM</h1>
+    <p id="subtitulo" class="mini">
+        Zona de pruebas para acceder, modificar y manejar eventos.
+    </p>
+
+
+    <section class="bloque" id="zonaAcceso">
+        <h2>Zona 1: Acceso</h2>
+        <div>
+        <div id="caja1" class="pieza fondo-naranja">Caja 1</div>
+        <div id="caja2" class="pieza">Caja 2</div>
+        <div id="caja3" class="pieza fondo-naranja">Caja 3</div>
+        <div id="caja4" class="pieza fondo-negro">Caja 4</div>
+        </div>
+
+
+        <p class="mini" id="estado">Estado: esperando…</p>
+    </section>
+
+
+    <section class="bloque" id="zonaAtributos">
+        <h2>Zona 2: Atributos</h2>
+        <a href="https://example.com" target="_blank" title="Enlace inicial">Ir a ejemplo</a>
+        <p class="mini" id="infoLink">Info enlace: —</p>
+    </section>
+
+
+    <section class="bloque" id="zonaLista">
+        <h2>Zona 3: Lista</h2>
+        <ul id="lista">
+        <li class="item fondo-naranja">Elemento A</li>
+        <li class="item">Elemento B</li>
+        <li class="item fondo-naranja">Elemento C</li>
+        <li class="item fondo-negro">Elemento D</li>
+        </ul>
+    </section>
+
+
+    <section class="bloque" id="zonaCrear">
+        <h2>Zona 4: Crear / eliminar</h2>
+        <button id="btnCrear" onclick="crear1()">Crear</button>
+        <button id="btnEliminar" onclick="eliminar1()">Eliminar</button>
+        <div id="contenedorNuevos"></div>
+    </section>
+
+
+    <section class="bloque" id="zonaEventos">
+        <h2>Zona 5: Eventos</h2>
+        <button id="btnAccion">Acción</button>
+        <input id="campoTexto" type="text" placeholder="Escribe aquí..." />
+
+
+        <div class="pieza fondo-naranja" onclick="mensajeDirecto('Has pulsado el elemento con evento en HTML')">
+        Evento en HTML (onclick)
+        </div>
+    </section>
+
+
+    <script src="./script.js"></script>
+    </body>
+</html>

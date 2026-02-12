@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- ESTO ES EL HEADER -->
+    <header>
+        <nav>
+            <a href="./index.html">INICIO</a>
+            <a href="./intereses.html">INTERESES</a>
+            <a href="./contacto.html">CONTACTO</a>
+        </nav> 
+    </header>
+    <!-- ESTO ES EL MAIN -->
+    <main>
+        <form action="">
+            <!-- NOMBRE -->
+            <label for="">Nombre:</label>
+                <input type="text" pattern="[A-Z, a-z]+" required>
+            <!-- TELÉFONO -->
+            <label for="">Teléfono:</label>
+                <input type="tel" minlength="9" maxlength="9" pattern="[0-9]{9}" required>
+            <!-- COMENTARIO -->
+            <label for="">CUESTIÓN</label>
+            <textarea name="" id=""></textarea>
+            <!-- TURNO -->
+            <input type="radio" name="1" id="1">
+                <label for="">Mañana</label>
+            <input type="radio" name="1" id="1">
+                <label for="">Tarde</label>
+            <!-- DESPLEGABLE SENCILLO -->
+            <select name="opa" id="opa" required>
+                <option value="" disabled selected>PA Q?</option>
+                <option value="tb">TRABAJO</option>
+                <option value="cv">DUDA CV</option>
+                <option value="tbb">TRABAJO</option>
+            </select>
+            <!-- DESPLEGABLE MULTIPLE -->
+             <label for="ciudad">Ciudad</label>
+                <select name="ciudad" id="ciudad" required>
+
+                    <optgroup label="España">
+                        <option value="m">Madrid</option>
+                        <option value="b">Barcelona</option>
+                    </optgroup>
+
+                    <optgroup label="México">
+                        <option value="cdmx">Ciudad de México</option>
+                        <option value="g">Guadalajara</option>
+                    </optgroup>
+
+                    <optgroup label="francia">
+                        <option value="p">París</option>
+                        <option value="l">Lyon</option>
+                    </optgroup>
+                </select>
+            <!-- CHECKBOX -->
+            <input type="checkbox">
+                <label for="">9:00-17:00</label>
+            <input type="checkbox">
+                <label for="">17:00-22:00</label>
+            <!-- BOTON -->
+            <button>ENVIAR</button>
+        </form>
+    </main>
+    <!-- ESTO ES EL FOOTER -->
+    <footer>
+        <figure><img src="./images/esvastica.png" alt="FOTO DE UNA ESVASTICA" class="foto"></figure>
+        <figure><img src="./images/esvastica.png" alt="FOTO DE UNA ESVASTICA" class="foto"></figure>
+        <figure><img src="./images/esvastica.png" alt="FOTO DE UNA ESVASTICA" class="foto"></figure>
+        <figure><img src="./images/esvastica.png" alt="FOTO DE UNA ESVASTICA" class="foto"></figure>
+    </footer>
+</body>
+</html>
