@@ -1,0 +1,440 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: #384152;
+    color: white;
+
+    width: 100%;
+    height: 10vh;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #384152;
+    color: white;
+
+    width: 100%;
+    height: 10vh;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: blue;
+    color: white;
+
+    width: 100%;
+    height: 80vh;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #384152;
+    color: white;
+
+    width: 15%;
+    height: 100%;
+}
+
+
+.sidebar__title{
+    background-color: #384152;
+
+    width: 100%;
+}
+
+h1{
+    text-decoration-color: white;
+    
+}
+
+.sidebar__inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #384152;
+    color: white;
+
+    width: 100%;
+    height: 40%
+}
+
+.sidebar__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: #384152;
+    color: white;
+
+    width: 100%;
+    height: 100%
+}
+
+.sidebar__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #384152;
+    color: white;
+
+    width: 100%;
+    height: 100%
+    
+    
+
+
+}
+
+.sidebar__link{
+    border: 0.1rem;
+    border-color: black;
+
+    border: 0.5rem;
+    border-color: black;
+}
+
+
+.mid-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: white;
+    color: white;
+
+    width: 100%;
+    height: 8%;
+}
+
+.mid-text__box.mid-text__box--left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #384152;
+    color: white;
+
+    width: 47%;
+    height: 100%;
+
+    border-radius: 0.5rem;
+}
+
+
+.mid-text__box.mid-text__box--right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #384152;
+    color: white;
+
+    width: 47%;
+    height: 100%;
+
+    border-radius: 0.5rem;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 85%;
+    height: 100%;
+
+    background-color: white;
+}
+
+.section.section--products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: purple;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 93%;
+
+    background-color: white;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 40%;
+    height: 40%;
+
+    background-color: white;
+}
+
+.card__figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 20%;
+    height: 20%;
+
+    background-color: bl;
+}
+
+.button.button--buy{
+    width: 100%;
+    height: 15%;
+
+    background-color: #2563EA;
+
+    border-radius: 0.5rem;
+    border-color: #2563EA ;
+    color: white;
+}
+
+
+.card__figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 60%;
+
+    background-color: white;
+
+    border-radius: 0.5rem;
+}
+
+
+.card__caption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 40%;
+
+    background-color: yellow;
+}
+
+
+.card__img{
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0.5rem;
+}
+
+.section__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    width: 100%;
+    height: 7%;
+
+    background-color: white;
+
+    color: black;
+
+    padding-left: 2%;
+}
+
+.site-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: red;
+}
+.header__inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: yellow;
+}
+
+.brand{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-right: 14%;
+
+    width: 30%;
+    height: 100%;
+
+    background-color: #384152;
+}
+.brand-link{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 85%;
+    height: 100%;
+
+    background-color: yellow;
+
+    text-decoration: none;
+    
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #384152;
+
+
+}
+.site-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: brown;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: pink;
+}
+
+.header__actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 15%;
+    height: 100%;
+
+    background-color: #384152;
+}
+
+.button.button--login{
+    background-color: #2562E7;
+
+    width: 60%;
+    height: 40%;
+
+    border-radius: 0.5rem;
+    border-color: #2562E7 ;
+
+    color: white;
+
+}
+
+.page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 80vh;
+
+    background-color: green;
+}
+
+
+
+
+
+
+
+.card-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 10%;
+    height: 100%;
+
+    background-color: yellow;
+}
