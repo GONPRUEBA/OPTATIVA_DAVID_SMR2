@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="site-header" class="header">
+        <div id="header-inner" class="header__inner">
+        <!-- Logo + Marca (izquierda) -->
+        <div id="brand" class="brand">
+            <a id="brand-link" class="brand__link" href="#">
+            <img
+                id="brand-logo"
+                class="brand__logo"
+                src="./logo.svg"
+                alt="Logo de la marca"
+                width="48"
+                height="48"
+            />
+            </a>
+            <h1 id="brand-name" class="brand__name">optativa</h1>
+        </div>
+
+        <!-- Navegación (centro) -->
+        <nav id="site-nav" class="nav">
+            <ul id="nav-list" class="nav__list">
+            <li class="nav__item">
+                <a id="nav-home" class="nav__link" href="#">Home</a>
+            </li>
+            <li class="nav__item">
+                <a id="nav-about" class="nav__link" href="#">Artículos</a>
+            </li>
+            <li class="nav__item">
+                <a id="nav-services" class="nav__link" href="#">Contacto</a>
+            </li>
+            <li class="nav__item">
+                <a id="nav-contact" class="nav__link" href="#">FAQ</a>
+            </li>
+            </ul>
+        </nav>
+
+        <!-- Botón iniciar sesión (derecha) -->
+        <div id="header-actions" class="header__actions">
+            <button id="btn-login" class="button button--login" type="button">
+            Iniciar sesión
+            </button>
+        </div>
+        </div>
+    </header>
+
+    <div id="page" class="page">
+        <!-- ASIDE -->
+    <aside id="sidebar" class="sidebar">
+        <div id="sidebar-inner" class="sidebar__inner">
+            <h1 id="sidebar-title" class="sidebar__title">Accesos</h1>
+
+            <ul id="sidebar-links" class="sidebar__list">
+                <li class="sidebar__item">
+                <a id="aside-link-1" class="sidebar__link" href="#">Link 1</a>
+                </li>
+                <li class="sidebar__item">
+                <a id="aside-link-2" class="sidebar__link" href="#">Link 2</a>
+                </li>
+                <li class="sidebar__item">
+                <a id="aside-link-3" class="sidebar__link" href="#">Link 3</a>
+                </li>
+                <li class="sidebar__item">
+                <a id="aside-link-4" class="sidebar__link" href="#">Link 4</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+        <!-- MAIN -->
+    <main id="main-content" class="main">
+        <section id="products" class="section section--products">
+            <h1 id="products-title" class="section__title">Productos</h1>
+
+            <div id="cards" class="cards">
+                <!-- Card 1 -->
+                <article id="card-1" class="card">
+                    <figure id="card-figure-1" class="card__figure">
+                        <img
+                        id="card-img-1"
+                        class="card__img"
+                        src="./imagen1.svg"
+                        alt="Imagen del producto 1"
+                        width="320"
+                        height="200"
+                        />
+                        <figcaption id="card-caption-1" class="card__caption">
+                        <p id="card-text-1" class="card__text">Producto 1</p>
+                        </figcaption>
+                    </figure>
+                    <button id="btn-buy-1" class="button button--buy" type="button">
+                        Comprar
+                    </button>
+                </article>
+
+                <!-- Card 2 -->
+                <article id="card-2" class="card">
+                    <figure id="card-figure-2" class="card__figure">
+                        <img
+                        id="card-img-2"
+                        class="card__img"
+                        src="./imagen2.svg"
+                        alt="Imagen del producto 2"
+                        width="320"
+                        height="200"
+                        />
+                        <figcaption id="card-caption-2" class="card__caption">
+                        <p id="card-text-2" class="card__text">Producto 2</p>
+                        </figcaption>
+                    </figure>
+                    <button id="btn-buy-2" class="button button--buy" type="button">
+                        Comprar
+                    </button>
+                </article>
+
+                <!-- Card 3 -->
+                <article id="card-3" class="card">
+                    <figure id="card-figure-3" class="card__figure">
+                        <img
+                        id="card-img-3"
+                        class="card__img"
+                        src="./imagen3.svg"
+                        alt="Imagen del producto 3"
+                        width="320"
+                        height="200"
+                        />
+                        <figcaption id="card-caption-3" class="card__caption">
+                        <p id="card-text-3" class="card__text">Producto 3</p>
+                        </figcaption>
+                    </figure>
+                    <button id="btn-buy-3" class="button button--buy" type="button">
+                        Comprar
+                    </button>
+                </article>
+
+                <!-- Texto intermedio (entre filas) -->
+                <div id="mid-text" class="mid-text">
+                    <div id="mid-left" class="mid-text__box mid-text__box--left">
+                        <p id="mid-left-p" class="mid-text__p">
+                        Descubre colecciones seleccionadas y ofertas semanales. Envío rápido y soporte en horario ampliado.
+                        </p>
+                    </div>
+                    <div id="mid-right" class="mid-text__box mid-text__box--right">
+                        <p id="mid-right-p" class="mid-text__p">
+                        ¿Listo para empezar? Crea tu cuenta en 1 minuto y recibe un cupón de bienvenida en tu primera compra.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <article id="card-4" class="card">
+                    <figure id="card-figure-4" class="card__figure">
+                        <img
+                        id="card-img-4"
+                        class="card__img"
+                        src="./imagen4.svg"
+                        alt="Imagen del producto 4"
+                        width="320"
+                        height="200"
+                        />
+                        <figcaption id="card-caption-4" class="card__caption">
+                        <p id="card-text-4" class="card__text">Producto 4</p>
+                        </figcaption>
+                    </figure>
+                    <button id="btn-buy-4" class="button button--buy" type="button">
+                        Comprar
+                    </button>
+                </article>
+
+                <!-- Card 5 -->
+                <article id="card-5" class="card">
+                    <figure id="card-figure-5" class="card__figure">
+                        <img
+                        id="card-img-5"
+                        class="card__img"
+                        src="./imagen5.svg"
+                        alt="Imagen del producto 5"
+                        width="320"
+                        height="200"
+                        />
+                        <figcaption id="card-caption-5" class="card__caption">
+                        <p id="card-text-5" class="card__text">Producto 5</p>
+                        </figcaption>
+                    </figure>
+                    <button id="btn-buy-5" class="button button--buy" type="button">
+                        Comprar
+                    </button>
+                </article>
+
+                <!-- Card 6 -->
+                <article id="card-6" class="card">
+                    <figure id="card-figure-6" class="card__figure">
+                        <img
+                        id="card-img-6"
+                        class="card__img"
+                        src="./imagen6.svg"
+                        alt="Imagen del producto 6"
+                        width="320"
+                        height="200"
+                        />
+                        <figcaption id="card-caption-6" class="card__caption">
+                        <p id="card-text-6" class="card__text">Producto 6</p>
+                        </figcaption>
+                    </figure>
+                    <button id="btn-buy-6" class="button button--buy" type="button">
+                        Comprar
+                    </button>
+                </article>
+            </div>
+        </section>
+    </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="site-footer" class="footer">
+        <p id="footer-copy" class="footer__copy">© GONZALO</p>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>
